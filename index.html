@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>フォーム</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>contact</h1>
+        </header>
+
+        <main>
+            <form action="confirm.html">
+                <label class="user-name">
+                    <p>お名前<span class="require">必須</span></p>
+                    <input type="text" placeholder="お名前をフルネームでご入力ください" required>
+                </label>
+
+                <label class="user-email">
+                    <p>メールアドレス<span class="require">必須</span></p>
+                    <input type="email" placeholder="メールアドレスをご入力ください" required>
+                </label>
+
+                <label class="user-tel">
+                    <p>電話番号<span class="require">必須</span></p>
+                    <input type="tel" placeholder="電話番号をご入力ください" required>
+                </label>
+
+                <label class="contact-content">
+                    <p>お問い合わせ内容<span class="require">必須</span></p>
+                    <textarea placeholder="お問い合わせ内容をご入力ください（400字以内）"></textarea>
+                </label>
+
+                <div class="btn-area">
+                    <button id="btn_confirm" class="btn">確認する</button>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <small class="copyright">&copy; 2024 form</small>
+        </footer>
+    </body>
+</html>
