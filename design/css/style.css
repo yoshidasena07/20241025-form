@@ -1,0 +1,213 @@
+@charset "utf-8";
+/****************************
+* ページ共通
+*****************************/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/********************
+* ヘッダー
+*********************/
+header {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+h1 {
+  color: #222; 
+  text-transform: uppercase;
+  font-size: 32px;
+  padding: 12px 24px;
+  border: 2px solid #fff;
+  box-shadow: 10px 5px 5px #070C42;
+}
+/********************
+* メイン
+*********************/
+main {
+  padding: 100px 0;
+  background: url(../img/k1.png) center / cover no-repeat;
+  display: flex;
+  color: #fff;
+}
+
+/********************
+* フッター
+*********************/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background: #333;
+}
+.copyright {
+  font-size: 14px;
+  color: #fff;
+}
+
+/********************
+* フォーム
+*********************/
+form {
+  /* グレーのエリアの全体幅 */
+  width: 1000px;
+  max-width: 100%;
+  /* 左右余白 = (項目<250px>＋ 入力欄<500px>) / 2 */
+  padding: 80px 125px;
+  margin: auto;
+  border: 1px solid #fff;
+}
+
+/*** 項目 ***/
+.form-item {
+  display: flex;
+  align-items: center;
+}
+.form-item + .form-item {
+  margin-top: 40px;
+}
+/*** 見出し ***/
+.form-heading {
+  width: 250px;
+  font-weight: bold;
+  margin: 0;
+}
+/* 必須 */
+.require {
+  color: #fff;
+  background: #ed2424;
+  font-weight: normal;
+  padding: 4px 8px;
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 16px;
+}
+
+::placeholder {
+  color: #fff;
+}
+/* 入力欄（１行） */
+input {
+  width: 400px;
+  max-width: 100%;
+  padding: 8px;
+  border: none;
+  font-size: 16px;
+  line-height: 1.0;
+  background: none;
+}
+/* 入力欄（複数行） */
+textarea {
+  width: 500px;
+  max-width: 100%;
+  min-height: 300px;
+  padding: 8px;
+  border: none;
+  font-size: 16px;
+  line-height: 1.6;
+  resize: vertical;
+  background: none;
+}
+#contact-content p {
+  align-self: baseline;
+}
+/* ボタン（共通） */
+.btn-area {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+button {
+  padding: 16px 32px;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+}
+/* ボタン（確認） */
+#btn_confirm {
+  background: #fff;
+  color: #222;
+}
+
+/****************************
+* 入力済みエリア
+*****************************/
+.form-entered {
+    width: 500px;
+    max-width: 100%;
+}
+/* ボタン（確認ページ） */
+#confirm .btn-area {
+    gap: 40px;
+}
+/* ボタン（戻る） */
+#btn_back {
+    background: #666;
+}
+/* ボタン（送信） */
+#btn_submit {
+    background: #222;
+}
+
+#complete main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 450px - 80px);
+}
+
+#btn_home {
+    background: #999;
+}
+/****************************
+* レスポンシブ
+*****************************/
+@media screen and (max-width: 402px) {
+  body {
+    overflow-x: hidden;
+  }
+  header {
+    height: 200px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  main {
+    padding: 0;
+  }
+
+  form {
+    width: 100%;
+    padding: 40px 8px;
+  }
+  .form-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form-heading {
+    margin-bottom: 12px;
+  }
+ .form-item,
+ input,
+ textarea,
+ .font-entered {
+    width: 100px;
+  }
+  .btn-area {
+    margin-top: 40px;
+  }
+  #complete main {
+    padding: 80px 8px;
+    min-height: calc(100vh - 200px -80px);
+  }
+}
